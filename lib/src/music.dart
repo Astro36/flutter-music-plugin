@@ -4,6 +4,7 @@ class Music {
   int albumId;
   String artist;
   int artistId;
+  int audioId;
   int duration;
   String genre;
   int genreId;
@@ -16,6 +17,7 @@ class Music {
     albumId = map["albumId"];
     artist = map["artist"];
     artistId = map["artistId"];
+    audioId = map["audioId"];
     duration = map["duration"];
     genre = map["genre"];
     genreId = map["genreId"];
