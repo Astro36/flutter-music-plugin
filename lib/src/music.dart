@@ -12,16 +12,16 @@ class Music {
   String uri;
 
   Music.fromMap(Map map) {
-    album = map["album"];
-    albumArt = map["albumArt"];
-    albumId = map["albumId"];
-    artist = map["artist"];
-    artistId = map["artistId"];
-    audioId = map["audioId"];
-    duration = map["duration"];
-    genre = map["genre"];
-    genreId = map["genreId"];
-    title = map["title"];
-    uri = map["uri"];
+    album = map['album'];
+    albumArt = map['albumArt'];
+    albumId = map['albumId'];
+    artist = map['artist'];
+    artistId = map['artistId'];
+    audioId = map['audioId'];
+    duration = map['duration'];
+    genre = map['genre'];
+    genreId = map['genreId'];
+    title = map['title'];
+    uri = map['uri'];
   }
 }

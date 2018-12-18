@@ -13,22 +13,25 @@ class MusicFinder {
 
   Future<List<Music>> getAll() async {
     if (_musicList == null) {
-      if (_isPending) { // Waiting for music list
+      if (_isPending) {
+        // Waiting for music list
         while (_musicList != null) {
           await new Future.delayed(Duration(seconds: 1));
         }
         return _musicList;
-      } else { // Getting music list from media store
+      } else {
+        // Getting music list from media store
         _isPending = true;
         List<dynamic> musicMapList =
-        await _channel.invokeMethod('finder.getAll');
+            await _channel.invokeMethod('finder.getAll');
         List<Music> musicList =
-        musicMapList.map((musicMap) => Music.fromMap(musicMap)).toList();
+            musicMapList.map((musicMap) => Music.fromMap(musicMap)).toList();
         _musicList = musicList;
         _isPending = false;
         return musicList;
       }
-    } else { // Getting music list from cache
+    } else {
+      // Getting music list from cache
       return _musicList;
     }
   }

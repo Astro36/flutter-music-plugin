@@ -9,38 +9,38 @@ class MusicPlayer {
   const MusicPlayer._internal();
 
   Future<int> getCurrentPosition() async {
-    return await _channel.invokeMethod("player.getCurrentPosition");
+    return await _channel.invokeMethod('player.getCurrentPosition');
   }
 
   Future<bool> isPlaying() async {
-    return await _channel.invokeMethod("player.isPlaying");
+    return await _channel.invokeMethod('player.isPlaying');
   }
 
   void mute() {
-    _channel.invokeMethod("player.mute");
+    _channel.invokeMethod('player.mute');
   }
 
   void pause() {
-    _channel.invokeMethod("player.pause");
+    _channel.invokeMethod('player.pause');
   }
 
   void prepare(Music music) {
-    _channel.invokeMethod("player.prepare", music.uri);
+    _channel.invokeMethod('player.prepare', music.uri);
   }
 
   void seekTo(int msec) {
-    _channel.invokeMethod("player.seekTo", msec);
+    _channel.invokeMethod('player.seekTo', msec);
   }
 
   void start() {
-    _channel.invokeMethod("player.start");
+    _channel.invokeMethod('player.start');
   }
 
   void stop() {
-    _channel.invokeMethod("player.stop");
+    _channel.invokeMethod('player.stop');
   }
 
   void unmute() {
-    _channel.invokeMethod("player.unmute");
+    _channel.invokeMethod('player.unmute');
   }
 }
