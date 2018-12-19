@@ -37,6 +37,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        title: 'Flutter Music Plugin Example App',
         home: Scaffold(
             appBar: AppBar(
               title: const Text('Flutter Music Plugin Example App'),
@@ -57,7 +58,7 @@ class _MyAppState extends State<MyApp> {
                             leading: _buildAlbumArt(music),
                             title: _buildTitle(music),
                             subtitle: Text(
-                                "${music.artist}\n${music.album} / ${music.genre}"),
+                                '${music.artist}\n${music.album} / ${music.genre}'),
                             isThreeLine: true,
                             onTap: () {
                               _musicPlayer.prepare(music);
@@ -82,7 +83,7 @@ class _MyAppState extends State<MyApp> {
                       CircularProgressIndicator(),
                       Padding(
                           padding: EdgeInsets.only(top: 16),
-                          child: Text("Fetching music list...")),
+                          child: Text('Fetching music list...')),
                     ],
                   ));
                 }
